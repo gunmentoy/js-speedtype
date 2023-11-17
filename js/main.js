@@ -16,6 +16,7 @@ const scoreDisplay = document.querySelector("#score");
 const timeDisplay = document.querySelector("#time");
 const message = document.querySelector("#message");
 const seconds = document.querySelector("#seconds");
+const restartButton = document.querySelector("#restart");
 
 // Words array
 const words = [
@@ -78,6 +79,7 @@ function init() {
   wordInput.addEventListener("input", startMatch);
   setInterval(countdown, 1000);
   setInterval(checkStatus, 50);
+  restartButton.addEventListener("click", restartGame);
 }
 
 // Start matching words
@@ -131,6 +133,17 @@ function setGameMode(mode) {
   score = 0;
   scoreDisplay.innerHTML = score;
   isPlaying = false;
+}
+
+// Restart game
+function restartGame() {
+  time = currentLevel;
+  score = 0;
+  isPlaying = true;
+  message.innerHTML = "";
+  wordInput.value = "";
+  scoreDisplay.innerHTML = score;
+  showWord();
 }
 
 // Event listeners
