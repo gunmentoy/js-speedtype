@@ -79,6 +79,23 @@ function init() {
   setInterval(checkStatus, 50);
 }
 
+// start matching words
+function startMatch() {
+  if (matchWords()) {
+    isPlaying = true;
+    time = 4;
+    showWord(words);
+    wordInput.value = "";
+    score++;
+  }
+  // if score is -1, display 0
+  if (score === -1) {
+    scoreDisplay.innerHTML = 0;
+  } else {
+    scoreDisplay.innerHTML = score;
+  }
+}
+
 // pick and show random word
 function showWord(words) {
   // generate random array index
