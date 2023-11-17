@@ -64,7 +64,7 @@ const words = [
   "waterfall",
   "xylophone",
   "yoga",
-  "zebra"
+  "zebra",
 ];
 
 // initialize game
@@ -96,6 +96,17 @@ function startMatch() {
   }
 }
 
+// match currentWord to wordInput
+function matchWords() {
+  if (wordInput.value === currentWord.innerHTML) {
+    message.innerHTML = "Correct!";
+    return true;
+  } else {
+    message.innerHTML = "";
+    return false;
+  }
+}
+
 // pick and show random word
 function showWord(words) {
   // generate random array index
@@ -121,7 +132,7 @@ function countdown() {
 // check game status
 function checkStatus() {
   if (!isPlaying && time === 0) {
-    message.innerHTML = "Game Over!";
+    message.innerHTML = "Game Over :(";
     score = -1;
   }
 }
