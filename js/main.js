@@ -79,6 +79,8 @@ const words = [
 
 // initialize game
 function init() {
+  // show number of seconds in UI
+  seconds.innerHTML = currentLevel;
   // load word from array
   showWord(words);
   // start matching on word input
@@ -109,7 +111,7 @@ function startMatch() {
 // match currentWord to wordInput
 function matchWords() {
   if (wordInput.value === currentWord.innerHTML) {
-    message.innerHTML = "Correct!";
+    message.innerHTML = "correct!";
     return true;
   } else {
     message.innerHTML = "";
@@ -142,7 +144,7 @@ function countdown() {
 // check game status
 function checkStatus() {
   if (!isPlaying && time === 0) {
-    message.innerHTML = "Game Over :(";
+    message.innerHTML = "game over :( hahah loser!!";
     score = -1;
   }
 }
