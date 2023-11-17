@@ -19,11 +19,56 @@ const seconds = document.querySelector("#seconds");
 
 // Words array
 const words = [
-  "hat", "river", "lucky", "statue", "generate", "stubborn", "cocktail", "runaway", "joke", "developer",
-  "establishment", "hero", "javascript", "nutrition", "revolver", "echo", "siblings", "investigate", "horrendous",
-  "symptom", "laughter", "magic", "master", "space", "definition", "apple", "banana", "chocolate", "elephant",
-  "fireworks", "guitar", "happiness", "island", "jungle", "kangaroo", "lemon", "mountain", "nightmare", "ocean",
-  "piano", "queen", "rainbow", "sunset", "tiger", "umbrella", "volcano", "waterfall", "xylophone", "yoga", "zebra"
+  "hat",
+  "river",
+  "lucky",
+  "statue",
+  "generate",
+  "stubborn",
+  "cocktail",
+  "runaway",
+  "joke",
+  "developer",
+  "establishment",
+  "hero",
+  "javascript",
+  "nutrition",
+  "revolver",
+  "echo",
+  "siblings",
+  "investigate",
+  "horrendous",
+  "symptom",
+  "laughter",
+  "magic",
+  "master",
+  "space",
+  "definition",
+  "apple",
+  "banana",
+  "chocolate",
+  "elephant",
+  "fireworks",
+  "guitar",
+  "happiness",
+  "island",
+  "jungle",
+  "kangaroo",
+  "lemon",
+  "mountain",
+  "nightmare",
+  "ocean",
+  "piano",
+  "queen",
+  "rainbow",
+  "sunset",
+  "tiger",
+  "umbrella",
+  "volcano",
+  "waterfall",
+  "xylophone",
+  "yoga",
+  "zebra",
 ];
 
 // Initialize game
@@ -90,6 +135,12 @@ function setGameMode(mode) {
 
 // Event listeners
 window.addEventListener("load", init);
-document.getElementById("easy").addEventListener("click", () => setGameMode("easy"));
-document.getElementById("medium").addEventListener("click", () => setGameMode("medium"));
-document.getElementById("hard").addEventListener("click", () => setGameMode("hard"));
+document
+  .getElementById("easy")
+  .addEventListener("click", () => setGameMode("easy"));
+document
+  .getElementById("medium")
+  .addEventListener("click", () => setGameMode("medium"));
+document
+  .getElementById("hard")
+  .addEventListener("click", () => setGameMode("hard"));
